@@ -1,5 +1,4 @@
 @echo off
-chcp 65001 >nul
 echo Limpando arquivos temporários...
 
 :: Limpando pasta temporária do sistema
