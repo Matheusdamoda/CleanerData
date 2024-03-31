@@ -1,4 +1,5 @@
 @echo off
+cd /d c:\windows
 echo Limpando arquivos temporários...
 
 :: Limpando pasta temporária do sistema
