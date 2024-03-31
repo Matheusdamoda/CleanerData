@@ -1,20 +1,11 @@
 @echo off
-cd /d c:\windows
-echo Limpando arquivos temporários...
 
-:: Limpando pasta temporária do sistema
-echo Limpando pasta temporária do sistema...
-RD /S /Q %SystemRoot%\Temp 2>nul
-MD %SystemRoot%\Temp
-
-:: Limpando a variável de ambiente TEMP
-echo Limpando a variável de ambiente TEMP...
-RD /S /Q %TEMP% 2>nul
-MD %TEMP%
-
-:: Limpando arquivos de log
-echo Limpando arquivos de log...
-del /Q /F *.log
-
-echo Limpeza concluída.
-pause
+del /f /s /q %systemdrive%\*.tmp
+del /f /s /q %systemdrive%\*.log
+del /f /s /q %systemdrive%\*.tmp
+rd /s /q %windir%\temp & md %windir%\temp 
+del /f /s /q "%userprofile%\recent\*.*"
+del /f /s /q "%userprofile%\local settings\history\*.*"
+@REM del /f /s /q "%userprofile%\local settings\temp\*.*"
+del /f /s /q %windir%\prefetch\*.* 
+del /f /s /q %systemdrive%\*.old 
